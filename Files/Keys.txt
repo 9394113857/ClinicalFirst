@@ -1,0 +1,14 @@
+commands:-
+ctrl + r = replace
+ctrl + f = find
+shift + fn6 = rename
+ctrl + alt + l = reformat code
+ctrl + alt + s = settings
+ctrl + shift + fn10 = run the script
+ctrl + f2 = stop the script shift + f9 = debug
+alt + enter = new
+ctrl + shift + j = join the lines
+ctgrl + d = duplicate line
+shift + tab = unident line or selection
+ctgrl + shift + U = Toggle case
+
