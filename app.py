@@ -28,6 +28,14 @@ def default():
 if __name__ == "__main__":
     app.run(debug=True)
 
+################################## END CODE ###############################################
+
 # When you deploy before to the server:-
 # Note:-     app.run(debug=False)
 # Make debug value False and deploy the code.
+
+#
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=80)
+
+# https://stackoverflow.com/questions/20212894/how-do-i-get-flask-to-run-on-port-80
