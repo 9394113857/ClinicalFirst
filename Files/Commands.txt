@@ -1,14 +1,14 @@
-1.Install requirements.txt:-
-py -m pip install flask
-
-2.Save the updated configuration of module to requirements.txt:-
-py -m pip freeze > requirements.txt
+1.Save the updated configurations or libraies to requirements.txt:-
+py -m or pip freeze > requirements.txt
 
 3.Install requirements.txt:-
 py -m pip install -r requirements.txt
 
+3.Install specific requirements:-
+py -m or pip install flask
+
 4.Upgrade pip:-
-py -m pip install --upgrade pip
+py -m or pip install --upgrade pip
 
 
 

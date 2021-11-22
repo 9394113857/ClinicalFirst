@@ -93,37 +93,25 @@ def usersignup():
                 # return fun("successfully inserted", args, *kwargs), 201
                 return "Succesfully Inserted", 200
             except ValidationError as e:
-                logTo_database("/user/insert", "user_signup", e, 401)
+                # logTo_database("/user/insert", "user_signup", e, 401)
                 return (e.messages), 400
         return "Invalid input", 200
     # return wrappersUserSignup
 
 
-def logTo_database(apiUrl, method_Name, e, errorCode):
-    date = datetime.today()
-    cur = mysql.connection.cursor()
-    print(e)
-    cur.execute("insert into api_logs(API_NAME, API_METHOD, TRIGGERED_TIME, ERROR_CODE) values(%s, %s, %s, %s)",
-                (apiUrl, method_Name, date, errorCode))
-    mysql.connection.commit()
+# def logTo_database(apiUrl, method_Name, e, errorCode):
+#     date = datetime.today()
+#     cur = mysql.connection.cursor()
+#     print(e)
+#     cur.execute("insert into api_logs(API_NAME, API_METHOD, TRIGGERED_TIME, ERROR_CODE) values(%s, %s, %s, %s)",
+#                 (apiUrl, method_Name, date, errorCode))
+#     mysql.connection.commit()
 
 
 # @user.route('/create', methods=['POST'])
 # @usersignup
 # def dpttest(test):
 #     return test
-
-
-
-# Users:-
-@user.route("/list")
-def users():
-    cursor = mysql.connection.cursor()
-    cursor.execute("select * from user_signup")
-    user_details = cursor.fetchall()
-    print(user_details, "User Details")
-    return jsonify(user_details), 200
-
 
 # Login:-
 def logined(func):
@@ -278,3 +266,11 @@ def delete_user_signup(USER_ID):
     user_details = cursor.fetchall()
     return jsonify({'user_details':user_details}),200
 
+# Users:-
+@user.route("/list")
+def users():
+    cursor = mysql.connection.cursor()
+    cursor.execute("select * from user_signup")
+    user_details = cursor.fetchall()
+    print(user_details, "User Details")
+    return jsonify(user_details), 200

@@ -1,0 +1,36 @@
+1.Signup:-
+Post:-
+http://127.0.0.1:5000/user/insert
+Body-> raw -> json
+{
+    "username": "raghunadh",
+    "email": "raghunadh28@gmail.com",
+    "phone": "+919394113857",
+    "password": "Raghu_123"
+}
+
+2.Login:-
+a).Post:-
+http://127.0.0.1:5000/user/login
+Body-> raw -> json
+{
+    "email": "raghunadh28@gmail.com",
+    "password": "raghu123"
+}
+
+This is token:-
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX21haWwiOiJyYWdodW5hZGgyOEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InBia2RmMjpzaGEyNTY6MjYwMDAwJGw1NFVEcUk4cjNrOFdsQ2wkZDczOTNjMDMyYmMxYTFkYTMxZTM5MzY2YzI5MWIwOTU2ZjhlNmMxZDc2NjI0OTVmMDFlZWVmYWEwNzU3YzNiNyIsInVzZXJfaWQiOiJVUzAwMDEiLCJleHAiOjE2Mzc1NTY4MjZ9.BXEFp52NeHuqE-2ODr6vDkHev6Fl3VQYQaPJhAmZ_iA
+
+Now, Go to headrs:-
+b).Get:-
+http://127.0.0.1:5000/user/logined
+
+Key:
+x-access-token
+
+value:
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX21haWwiOiJyYWdodW5hZGgyOEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InBia2RmMjpzaGEyNTY6MjYwMDAwJGw1NFVEcUk4cjNrOFdsQ2wkZDczOTNjMDMyYmMxYTFkYTMxZTM5MzY2YzI5MWIwOTU2ZjhlNmMxZDc2NjI0OTVmMDFlZWVmYWEwNzU3YzNiNyIsInVzZXJfaWQiOiJVUzAwMDEiLCJleHAiOjE2Mzc1NTkwMTh9.SURfKs96cluOSKn4kcoa_KXwuz1UPMhOu5rm77VZnFw
+
+
+
+
